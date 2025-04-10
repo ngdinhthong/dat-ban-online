@@ -1,0 +1,428 @@
+/* ========== GLOBAL RESET ========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: none; /* Xoá mọi background */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); /* Cùng màu với background menu */
+  z-index: -1; /* Đặt lớp phủ phía sau nội dung chính */
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background: none; /* Xoá màu nền */
+  backdrop-filter: none; /* Xoá hiệu ứng mờ */
+  -webkit-backdrop-filter: none;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: none; /* Tuỳ chọn: Xoá đổ bóng nếu muốn hoàn toàn trong suốt */
+  border-bottom: none;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #ffb78c;
+  color: white;
+}
+
+/* ========== WRAPPER ========== */
+.wrapper {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ========== TYPOGRAPHY ========== */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* ========== FORM ========== */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+/* ========== BUTTONS ========== */
+button, .action-button {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover, .action-button:hover {
+  background-color: #218838;
+}
+
+.primary-btn {
+  background-color: #007bff;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: white;
+}
+
+.delete-button {
+  background-color: #e34724;
+  color: white;
+}
+
+#cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+#cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+/* ========== BUTTON GROUP ========== */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  min-width: 220px;
+  background-color: #ff6600;
+  color: white;
+}
+
+.button-group button:hover {
+  background-color: #e65c00;
+}
+
+/* ========== SUCCESS MESSAGE ========== */
+.success, .success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+.success-message.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ========== TABLE ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.feedback-item {
+  background-color: #fff8f0;
+  border: 1px solid #ffd6b3;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.feedback-item h4 {
+  margin: 0 0 5px;
+}
+.introduction-body {
+  background: url('images/background-gioi-thieu.jpg') no-repeat center center fixed;
+  background-size: 100% 100%; /* Hoặc 'cover' tùy theo hiệu ứng bạn muốn */
+}
+
+/* CSS cho full background và giao diện trang giới thiệu */
+.introduction-body {
+  background: url('images/background-gioi-thieu.jpg') no-repeat center center fixed;
+  background-size: cover; /* Hoặc 100% 100% tùy bạn */
+}
+
+.introduction-body .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Lớp phủ trắng mờ */
+  z-index: -1;
+}
+
+.introduction-body .navbar {
+  background-color: rgba(255, 255, 255, 0.8); /* Nền mờ cho navbar */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+}
+
+.introduction-body .wrapper {
+  max-width: 960px; /* Điều chỉnh chiều rộng wrapper cho trang giới thiệu */
+  margin: 80px auto; /* Điều chỉnh margin top nếu cần */
+  background: transparent; /* Để nhìn thấy background */
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.introduction-body .intro-section,
+.introduction-body .food-gallery,
+.introduction-body .customer-experience {
+  background-color: rgba(255, 255, 255, 0.7); /* Nền mờ cho các section */
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.introduction-body .intro-image {
+  flex: 1;
+  text-align: center; /* Căn giữa hình ảnh */
+}
+
+.introduction-body .intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px; /* Tạo khoảng cách giữa ảnh và chữ */
+}
+
+.introduction-body .intro-image .image-caption {
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
+.introduction-body .food-gallery {
+  margin-bottom: 60px;
+}
+
+.introduction-body .food-gallery .food-item-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.introduction-body .food-gallery .food-image {
+  flex: 1;
+  text-align: center;
+}
+
+.introduction-body .food-gallery .food-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introduction-body .food-gallery .food-description {
+  flex: 1;
+}
+
+.introduction-body .food-gallery .food-description h4 {
+  margin-top: 0; /* Loại bỏ margin mặc định của h4 */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.introduction-body .food-gallery .food-description p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Bạn có thể thêm style để đảo ngược thứ tự hình ảnh và mô tả nếu muốn */
+/* Ví dụ cho món ăn thứ hai hiển thị hình ảnh bên phải: */
+.introduction-body .food-gallery .food-item-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.introduction-body .food-gallery .food-item-row:nth-child(even) .food-image {
+  text-align: left;
+}
+/* Floating AI Button */
+.ai-float-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* AI Chat Box */
+.ai-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 250px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  padding: 10px;
+  display: none;
+  z-index: 1000;
+}
+
+.ai-box input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.ai-box button {
+  width: 100%;
+  padding: 5px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ai-box .ai-response {
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: #333;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.close-btn {
+  cursor: pointer;
+  color: #888;
+}
+.ai-questions button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 6px 10px;
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.ai-questions button:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+.success {
+  display: none;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chỉnh Sửa Đặt Bàn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Thêm vào ngay sau thẻ <body> -->
+    <nav class="navbar">
+      <div class="logo">🍽️ KIMOCHI</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="introduction.html">Giới Thiệu</a>
+        </li> <li><a href="feedback.html">Đánh Giá</a></li>
+        <li><a href="contact.html">Liên Hệ</a></li>
+      </ul>
+    </nav>
+
+  <div class="wrapper">
+    <h2>✏️ Chỉnh Sửa Đặt Bàn</h2>
+    <form id="edit-form">
+      <input type="hidden" id="booking-id" />
+      <div>
+        <label for="name">Tên:</label>
+        <input type="text" id="name" required />
+      </div>
+      <div>
+        <label for="phone">Điện thoại:</label>
+        <input type="text" id="phone" required />
+      </div>
+      <div>
+        <label for="date">Ngày:</label>
+        <input type="date" id="date" required />
+      </div>
+      <div>
+        <label for="time">Giờ:</label>
+        <input type="time" id="time" required />
+      </div>
+      <div>
+        <label for="guests">Số khách:</label>
+        <input type="number" id="guests" min="1" required />
+      </div>
+      <button type="submit">Lưu Thay Đổi</button>
+    </form>
+    <p id="edit-success-message" style="color: green; font-weight: bold; display: none;">
+      ✅ Cập nhật đặt bàn thành công!
+    </p>
+    <div class="button-group">
+      <button class="action-button" onclick="window.location.href='list.html'">← Quay về Danh Sách</button>
+      
+      
+    </div>
+  </div>
+  <script src="edit.js"></script>
+</body>
+</html>

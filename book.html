@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt Bàn Online</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<script src="script.js"></script>
+<body>
+  <div class="overlay"></div>
+
+  <nav class="navbar">
+    <div class="logo">🍽️ KIMOCHI</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Trang Chủ</a></li>
+      <li><a href="introduction.html">Giới Thiệu</a>
+      </li> <li><a href="feedback.html">Đánh Giá</a></li>
+      <li><a href="contact.html">Liên Hệ</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="wrapper">
+   <!-- AI Floating Button -->
+<div class="ai-float-button" onclick="toggleAIBox()">
+  🤖
+</div>
+
+<!-- AI Chat Box -->
+<div class="ai-box" id="aiBox">
+  <div class="ai-header">
+    <strong>Trợ lý AI</strong>
+    <span class="close-btn" onclick="toggleAIBox()">×</span>
+  </div>
+  <div class="ai-questions">
+   
+    <button onclick="handleAIQuestion('Tôi có thể đặt bàn 7h tối nay không?')">Bạn muốn đặt bàn lúc 7h tối?</button>
+    <button onclick="handleAIQuestion('Nhà hàng có phục vụ món chay không?')">Nhà hàng có món ăn chay không.</button>
+    <button onclick="handleAIQuestion('Tôi có thể đặt cho 10 người không?')">Tôi muốn đặt bàn cho 10 người được không?</button>
+  </div>
+  <input type="text" id="ai-question" placeholder="Bạn cần gì?" />
+  <button id="ai-button">Hỏi AI</button>
+  <p id="ai-response" class="ai-response"></p>
+</div>
+
+    
+    <h2><i class="fa-solid fa-utensils"></i> Đặt Bàn Online</h2>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name"><i class="fa fa-user"></i> Tên:</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-group">
+        <label for="phone"><i class="fa fa-phone"></i> Điện thoại:</label>
+        <input type="text" id="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="date"><i class="fa fa-calendar"></i> Ngày:</label>
+        <input type="date" id="date" required />
+      </div>
+      <div class="form-group">
+        <label for="time"><i class="fa fa-clock"></i> Giờ:</label>
+        <input type="time" id="time" required />
+      </div>
+      <div class="form-group">
+        <label for="guests"><i class="fa fa-users"></i> Số khách:</label>
+        <input type="number" id="guests" min="1" value="1" required />
+      </div>
+      <button type="submit">Xác nhận đặt bàn</button>
+    </form>
+    <p id="success-message" class="success">✅ Đặt bàn thành công!</p>
+    <div class="button-group">
+      <button onclick="window.location.href='list.html'">📋 Xem Danh Sách Đặt Bàn</button>
+      <button onclick="window.location.href='index.html'">← Quay về Trang Chủ</button>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đánh Giá</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      padding: 20px;
+    }
+
+    /* === NAVBAR === */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .nav-links li a:hover {
+      background-color: #ffb78c;
+      color: white;
+    }
+
+    /* === FORM CONTAINER === */
+    .feedback-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #feedback-list {
+      margin-top: 30px;
+    }
+
+    .feedback-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .feedback-item h4 {
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .feedback-item p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🍽️ KIMOCHI</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Trang Chủ</a></li>
+      <li><a href="introduction.html">Giới Thiệu</a>
+      </li> <li><a href="feedback.html">Đánh Giá</a></li>
+      <li><a href="contact.html">Liên Hệ</a></li>
+    </ul>
+  </nav>
+
+  <!-- FEEDBACK FORM -->
+  <div class="feedback-container">
+    <h2>📝 Đánh Giá Của Bạn</h2>
+    <form id="feedback-form">
+      <input type="text" id="name" placeholder="Tên của bạn" required />
+      <select id="rating">
+        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+        <option value="4">⭐️⭐️⭐️⭐️</option>
+        <option value="3">⭐️⭐️⭐️</option>
+        <option value="2">⭐️⭐️</option>
+        <option value="1">⭐️</option>
+      </select>
+      <textarea id="comment" placeholder="Nhận xét của bạn..." required></textarea>
+      <button type="submit">Gửi đánh giá</button>
+    </form>
+    
+    <div id="feedback-list"></div>
+  </div>
+
+  <script src="feedback.js"></script>
+</body>
+</html>

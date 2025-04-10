@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liên Hệ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      padding: 20px;
+    }
+
+    /* === NAVBAR === */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .nav-links li a:hover {
+      background-color: #ffb78c;
+      color: white;
+    }
+
+    /* === CONTENT === */
+    .contact-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🍽️ KIMOCHI</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Trang Chủ</a></li>
+      <li><a href="introduction.html">Giới Thiệu</a>
+      </li> <li><a href="feedback.html">Đánh Giá</a></li>
+      <li><a href="contact.html">Liên Hệ</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT CONTENT -->
+  <div class="contact-container">
+    <h2>📍 Liên Hệ Với Chúng Tôi</h2>
+    <p>🏠 Địa chỉ:180 Cao Lỗ, Phường 4, Quận 8, TP.HCM</p>
+    <p>📞 Số điện thoại: 0909 123 456</p>
+    <p>✉️ Email: KIMOCHI@gmail.com</p>
+    <iframe src="https://maps.google.com/maps?q=stu%20cao%20lỗ&t=&z=15&ie=UTF8&iwloc=&output=embed" height="300" loading="lazy"></iframe>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Thông Tin Đặt Bàn</h2>
+    <div class="booking-details-container">
+        <table id="booking-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Thông Tin Đặt Bàn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tên:</td>
+                    <td id="name-display"></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại:</td>
+                    <td id="phone-display"></td>
+                </tr>
+                <tr>
+                    <td>Ngày:</td>
+                    <td id="date-display"></td>
+                </tr>
+                <tr>
+                    <td>Giờ:</td>
+                    <td id="time-display"></td>
+                </tr>
+                <tr>
+                    <td>Số khách:</td>
+                    <td id="guests-display"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button id="edit-button">Edit</button>
+    <button id="back-button">Back Booknow</button>
+    <button onclick="window.location.href='feedback.html'">📝 Đánh giá</button>
+<button onclick="window.location.href='contact.html'">📍 Liên hệ</button>
+
+
+    <script src="booking-details.js"></script>
+</body>
+</html>
